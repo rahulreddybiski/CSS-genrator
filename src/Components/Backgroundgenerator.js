@@ -5,7 +5,13 @@ import React, { useRef, useState } from 'react'
 
 const container = {
   width : '80%',
-  margin : '20px auto'
+  margin : {
+    xs : '80px auto',
+    sm : '80px auto',
+    md : '80px auto',
+    lg : '20px auto',
+    xl : '20px auto'
+}
 }
 
 
@@ -51,7 +57,7 @@ function Backgroundgenerator() {
                 <Typography variant='small'>Apply this CSS to the html element you want to style.</Typography>
                 <Box sx={{position : 'relative',background : '#e4e4ea', height : '80px', width : '80%', marginTop : '20px'}}>
                     <Button onClick={copyText} sx={{background : 'white', border : '1px solid blue', position : 'absolute', right : '5px', top : '5px'}}>{!copy ? ('COPY') : ('COPIED')}</Button>
-                    <Typography ref={currentCode} variant='p' sx={{margin : '20px',position : 'absolute'}}>{`background-color : ${elementbgColor}`}</Typography>
+                    <Typography ref={currentCode} variant='p' sx={{margin : '20px',position : 'absolute',maxWidth : {xs : '70%', sm : '80%', md : '80%'}}}>{`background-color : ${elementbgColor}`}</Typography>
                 </Box>
                 <Typography variant='h6'>With a background generator tool, 
                          you can instantly create a background for any HTML element. 

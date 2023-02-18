@@ -15,6 +15,8 @@ const CardStyles = {
     }
 }
 
+
+
 function Hero() {
 
   return (
@@ -25,7 +27,7 @@ function Hero() {
                 <Grid item xs={12} sm={6}  md={4}>
                     <Card sx={CardStyles}>
                         <BorderAllIcon sx={{margin : '8px'}} />
-                        <CardHeader 
+                        <CardHeader sx={{height : '100px'}}
                         title='CSS Border Generator'
                         subheader='Generate a good looking border for your html elements'
                         >
@@ -40,7 +42,7 @@ function Hero() {
                 <Grid item xs={12} sm={6}  md={4}>
                     <Card sx={CardStyles}>
                         <FormatShapesIcon sx={{margin : '8px'}} />
-                        <CardHeader 
+                        <CardHeader sx={{height : '100px'}}
                         title='Background Generator'
                         subheader='Generate CSS with Background generator Tool'
                         >
@@ -54,14 +56,14 @@ function Hero() {
                 {/* Third Item */}
                 <Grid item xs={12} sm={6} md={4}>
                     <Card sx={CardStyles}>
-                        <InsertPhotoIcon sx={{margin : '8px'}} />
-                        <CardHeader 
-                        title='Image Filter Generator'
-                        subheader='Create filters by adding unique styles to your photos'
+                        <BorderAllIcon sx={{margin : '8px'}} />
+                        <CardHeader  sx={{height : '100px'}}
+                        title='CSS Border Radius Generator'
+                        subheader='Create Border radius by adding border to different sides'
                         >
                         </CardHeader>
                         <CardContent>
-                            <Link to='/CSS-Generator' style={{color : 'blue',textDecoration : 'none'}}>Go To Generator </Link>
+                            <Link to='/CSS-Generator/Border-radius-generator' style={{color : 'blue',textDecoration : 'none'}}>Go To Generator </Link>
                         </CardContent>
                     </Card>
                 </Grid>
@@ -69,16 +71,17 @@ function Hero() {
                 <Grid item xs={12} sm={6} md={4}>
                     <Card sx={CardStyles}>
                         <InsertPhotoIcon sx={{margin : '8px'}} />
-                        <CardHeader 
+                        <CardHeader  sx={{height : '100px'}}
                         title='Image Filter Generator'
                         subheader='Create filters by adding unique styles to your photos'
                         >
                         </CardHeader>
                         <CardContent>
-                            <Link to='/CSS-Generator' style={{color : 'blue',textDecoration : 'none'}}>Go To Generator </Link>
+                            <Link to='/CSS-Generator/Image-Filter-Generator' style={{color : 'blue',textDecoration : 'none'}}>Go To Generator </Link>
                         </CardContent>
                     </Card>
                 </Grid>
+                
             </Grid>
         </Container>
     </div>

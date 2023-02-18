@@ -4,6 +4,8 @@ import Home from "./Components/Home";
 import Cssgenerator from "./Components/Cssgenerator";
 import Bordergenerator from "./Components/Bordergenerator";
 import Backgroundgenerator from "./Components/Backgroundgenerator";
+import Borderradiusgenerator from "./Components/Borderradiusgenerator";
+import Imagefiltergenerator from "./Components/Imagefiltergenerator";
 
 function App() {
   return (
@@ -14,6 +16,8 @@ function App() {
           <Route path='/CSS-Generator' element={<Cssgenerator />}>
             <Route path='Border-Generator' element={<Bordergenerator />}/>
             <Route path='Background-Generator' element={<Backgroundgenerator />}/>
+            <Route path='Border-radius-generator' element={<Borderradiusgenerator />}/>
+            <Route path='Image-Filter-Generator' element={<Imagefiltergenerator />} />
           </Route>
         </Routes>
       </BrowserRouter>

@@ -5,7 +5,13 @@ import React, { useRef, useState } from 'react'
 
 const container = {
     width : '80%',
-    margin : '20px auto'
+    margin : {
+        xs : '80px auto',
+        sm : '80px auto',
+        md : '80px auto',
+        lg : '20px auto',
+        xl : '20px auto'
+    }
 }
 
 const options = ['Solid', 'Dotted', 'Dashed', 'Double', 'inset', 'none', 'Ridge', 'Outset', 'Hidden', 'None'];
@@ -53,7 +59,7 @@ function Bordergenerator() {
                 sx={{ width: 300 }}
                 renderInput={(params) => <TextField {...params} label="Border Style" />}
             />
-            <Box sx={{margin : '20px 0px', width: 300 }}>
+            <Box sx={{margin : '20px 0px', maxWidth: {xs : 200, sm : 300, md : 300} }}>
                 <Typography sx={{fontWeight : '100'}}>Border width All Side <span style={{marginLeft : '90px', color : 'blue'}}>{`${sliderValue}px`}</span></Typography>
                 <Slider onChange={handleSliderChange}
                     aria-label="Custom marks"
@@ -76,7 +82,7 @@ function Bordergenerator() {
                 <Typography variant='small'>Apply this CSS to the html element you want to style.</Typography>
                 <Box sx={{position : 'relative',background : '#e4e4ea', height : '80px', width : '80%', marginTop : '20px'}}>
                     <Button  onClick={copyText} sx={{background : 'white', border : '1px solid blue', position : 'absolute', right : '5px', top : '5px'}}>{!copy ? ('COPY') : ('COPIED')}</Button>
-                    <Typography ref={currentCode} variant='p' sx={{margin : '20px',position : 'absolute'}}>{`border : ${sliderValue}px ${borderStyle} ${borderColor}`}</Typography>
+                    <Typography ref={currentCode} variant='p' sx={{margin : '20px',position : 'absolute',maxWidth : {xs : '70%', sm : '80%', md : '80%'}}}>{`border : ${sliderValue}px ${borderStyle} ${borderColor}`}</Typography>
                 </Box>
                 <Typography variant='h6'>With a border generator tool, 
                          you can instantly create a border for any HTML element. 
